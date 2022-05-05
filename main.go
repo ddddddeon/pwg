@@ -29,6 +29,5 @@ func main() {
 		bytes[i] = byte(chars[rand.Int()%len(chars)])
 	}
 
-	// test
 	fmt.Println(string(bytes))
 }

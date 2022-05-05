@@ -1,16 +1,16 @@
-package main 
+package main
 
 import (
 	"fmt"
 	"math/rand"
-	"time"
 	"os"
 	"strconv"
+	"time"
 )
 
-var chars = "1234567890ABCDEFGHIJKLMNPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#%^()-+_=~"
+var chars = "1234567890ABCDEFGHIJKLMNPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-_"
 
-func main () {
+func main() {
 	var pwlen = 16
 	var err error
 
@@ -26,7 +26,7 @@ func main () {
 
 	bytes := make([]byte, pwlen)
 	for i := 0; i < pwlen; i++ {
-		bytes[i] = byte(chars[rand.Int() % len(chars)])
+		bytes[i] = byte(chars[rand.Int()%len(chars)])
 	}
 
 	fmt.Println(string(bytes))
